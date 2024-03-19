@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Fetch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"], input[type="submit"] {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload File</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" name="submit" value="Upload">
+        </form>
+
+        <h1>Fetch Files</h1>
+        <form action="fetch.php" method="post">
+            <input type="submit" name="submit" value="Fetch">
+        </form>
+    </div>
+</body>
+</html>
